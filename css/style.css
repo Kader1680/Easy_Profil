@@ -4,16 +4,19 @@
     padding: 0;
 }
 :root{
-    --white: white;
-    
+    --text: rgb(44, 44, 44);
+    --bg-box: white;
+    --bg-color: rgb(249, 249, 249);
     --font-family: 'Anek Malayalam', sans-serif;
 }
 body{
-    background-image: url('../images/d34b0e75fa5971a10669e0d083526dc4.jpg');
+    /* background-image: url('../images/d34b0e75fa5971a10669e0d083526dc4.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
+    background-color: var(--bg-color);
     color: var(--white);
     font-family: var(--font-family);
+    color: var(--text);
 }
 .container {
     margin: 26px 30px;
@@ -21,6 +24,10 @@ body{
 .container header {
     text-align: center;
     padding: 124px 0px;
+    background-image: url('../../Easy_Profil/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 header .image {
     margin: 45px 0px;
@@ -39,16 +46,17 @@ header h2 {
 }
 
 .container .box{
-    border: 1px solid;
+    box-shadow: 0px 0px 20px 6px rgb(0 0 0 / 13%);
     width: 100%;
     height: 100%;
     padding: 30px 26px;
     margin: 50px 0px;
+    background-color: var(--bg-box);
 }
 
 .easy_profil h3{
     font-size: 36px;
-    
+    font-weight: bold;
 }
 .easy_profil h2{
     font-size: 36px;
@@ -58,15 +66,47 @@ header h2 {
 .easy_profil p{
     font-size: 16px;
     line-height: 1.7;
+    color: var(--text);
+}
+.easy_profil:nth-child(2) p{
+    font-weight: bold;
 }
 .container .skill{
     font-weight: 500;
     font-size: 36px;
     margin-bottom: 15px;
-    background-color: white;
-    color: gray;
 }
-.progress label{
+
+.progress {
+    margin-left: -1rem;
+}
+
+.progress .content {
+    margin: 13px 0px;
+}
+.progress .content .iconify{
+    margin-bottom: -4px;
+    margin-left: 23px;
+}
+.progress .global{
+    display: flex;
+    margin-left: 1rem;
+    margin-top: -9px;
+}
+.global .note.select{
+    background-color: #12b8ce;
+}
+.global .note{    
+    background-color: #88878752;
+    width: 38px;
+    height: 5px;
+    border-radius: 10px 0px 13px 0px;
+    margin-left: 5px;
+}
+.note:nth-child(1){    
+    
+}
+/* .progress label{
     font-size: 23px;
     font-weight: 400;
 }
@@ -74,7 +114,7 @@ header h2 {
     width: 100%;
     font-size: 18px;
     margin: 8px 0px;
-}
+} */
 
 .education h3{
     font-weight: 500;
@@ -188,16 +228,17 @@ header h2 {
         font-size: 25px;
     }
     .progress {
-        font-size: 0px;
+        display: grid;
+        grid-template-columns: 50%;
     }
-    .progress label {
+    /* .progress label {
         font-size: 15px;
     }
     .progress progress {
         width: 100%;
         font-size: 13px;
         margin: 8px 0px;
-    }
+    } */
     
     .container .education {
         background-color: var(--gray);
